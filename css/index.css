@@ -19,17 +19,18 @@ body {
 
 article {
     /* limit the width of the article container */
-    width: 350px;
+    max-width: 100%;
     /* display the contents in a column */
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #9e11a2;
     border-radius: 10px;
-    margin: 0.5rem;
+    margin: 1rem;
     /* transition for the transform property, updated in the script */
     transition: transform 0.2s ease-out;
     box-shadow: 0 0 5px -2px hsla(0, 0%, 0%, 0.1);
+    margin-top: 5em;
 }
 
 article figure {
@@ -80,8 +81,9 @@ article div p {
     /* position relative for the pseudo element */
     position: relative;
     z-index: 5;
-    height: 300px;
+    height: 250px;
     overflow: auto;
+    margin-bottom: 0rem;
 }
 
 article div p:before {
@@ -109,6 +111,7 @@ article div h4 {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
+    margin-top: 1em;
 }
 
 article div h1 {
