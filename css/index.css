@@ -1,124 +1,100 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:700|Noticia+Text:400i&display=swap");
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+.team-boxed {
+    color: white;
+    background-color: #1e0240;
 }
 
-body {
-    /* center the article in the viewport */
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    /* include an off-white background */
-    background: #1e0240;
-    /* add perspective for the rotation of the article, added through the script */
-    perspective: 500px;
+.team-boxed p {
+    color: white;
+    word-break: break-word;
 }
 
-article {
-    /* limit the width of the article container */
-    max-width: 100%;
-    /* display the contents in a column */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    margin: 1rem;
-    /* transition for the transform property, updated in the script */
-    transition: transform 0.2s ease-out;
-    box-shadow: 0 0 5px -2px hsla(0, 0%, 0%, 0.1);
-    margin-top: 5em;
+.team-boxed h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
 }
 
-article figure {
-    /* limit the width and height of the figure to show the image in a circle */
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    /* specify negative margin matching half the height of the element */
-    margin-top: -60px;
-    /* position relative for the pseudo element */
-    position: relative;
+@media (max-width:767px) {
+    .team-boxed h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px;
+    }
 }
 
-article figure:before {
-    /* add a border around the figure matching the color of the background, faking the clip */
-    content: "";
-    border-radius: inherit;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 1px hsla(0, 0%, 0%, 0.1);
+.team-boxed .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-article figure img {
-    /* stretch the image to cover the size of the wrapping container */
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-    /* object fit to maintain the aspect ratio and fit the width/height */
-    object-fit: cover;
+.team-boxed .intro p {
+    margin-bottom: 0;
 }
 
-article div {
-    /* center the text in the div container */
+.team-boxed .people {
+    padding: 50px 0;
+}
+
+.team-boxed .item {
     text-align: center;
-    margin: 2rem;
 }
 
-article div p {
-    color: #fff;
-    font-weight: 400;
-    font-style: italic;
-    margin: 1rem 0 3rem;
-    font-family: "Noticia Text", serif;
-    /* position relative for the pseudo element */
-    position: relative;
-    z-index: 5;
-    height: 250px;
-    overflow: auto;
-    margin-bottom: 0rem;
+.team-boxed .item .box {
+    text-align: center;
+    padding: 30px;
+    background-color: #9e11a2;
+    margin-bottom: 30px;
 }
 
-article div p:before {
-    /* with SVG elements include two icons for the quote */
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    z-index: -5;
-    opacity: 0.05;
-    /* position the icons at either end of the paragraph, rotate the second to have a mirrorer image */
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>'), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70" transform="rotate(180)"><rect x="0" y="40" width="30" height="30"></rect><path d="M 0 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path><rect x="40" y="40" width="30" height="30"></rect><path d="M 40 40 q 0 -40 30 -40 v 15 q -15 0 -15 25"></path></svg>');
-    background-position: 20% 20%, 80% 80%;
-    background-repeat: no-repeat;
+.team-boxed .item .name {
+    font-weight: bold;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    color: white;
 }
 
-article div h4 {
-    /* considerably reduce the size of the heading */
-    color: #fff;
-    font-family: "Lato", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
+.team-boxed .item .title {
     text-transform: uppercase;
-    letter-spacing: 0.05rem;
-    margin-top: 1em;
+    font-weight: bold;
+    color: #d0d0d0;
+    letter-spacing: 2px;
+    font-size: 13px;
 }
 
-article div h1 {
-    /* considerably reduce the size of the heading */
-    color: #fff;
-    font-family: "Lato", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
+.team-boxed .item .description {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.team-boxed .item img {
+    max-width: 100px;
+}
+
+.team-boxed .social {
+    font-size: 18px;
+    color: #a2a8ae;
+}
+
+.team-boxed .social a {
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+.team-boxed .social a:hover {
+    opacity: 1;
+}
+
+.table td,
+.table th {
+    width: 50%;
+}
+
+dl,
+ol {
+    font-weight: bold;
 }
